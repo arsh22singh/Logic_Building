@@ -2,21 +2,23 @@ package DoWhileLoop;
 
 import java.util.*;
 
-class A {
-    public static int cla(Scanner sc) {
-        int total = 0;
-        int num;
-        do {
-            num = sc.nextInt();
-            if (num != 0) total += num;
-        } while (num != 0);
-        return total;
-    }
-}
 
-public class KeepTrackingNumberAndPrintSumOFAllNum {
+public  class KeepTrackingNumberAndPrintSumOFAllNum{
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println(A.cla(sc));
+        Scanner sc=new Scanner(System.in);
+        int total =0;
+        int num=0;
+        do{
+        System.out.println("Enetr the number ");
+        num= sc.nextInt();
+        if(num==0){
+            total=total+num;
+        }
+        else{
+            total+=num;
+        }
+        }while(num!=0);
+        System.out.print("Sum of number is = "+total);
+        sc.close();
     }
 }
