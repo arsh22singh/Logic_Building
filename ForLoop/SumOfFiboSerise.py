@@ -1,4 +1,4 @@
-# Print the Fibonacci series up to the required number of terms. 
+# Print the sum of  Fibonacci series up to the required number of terms. 
 import time
 
 num=int(input("Enter the  number!.."))
@@ -10,8 +10,9 @@ sum=0
 
 for i in range(num):
     
-    print(A,end=" ")
+    print(A,end=" ", flush=True)
     sum=sum+A
+    time.sleep(0.3)
     A=B
     B=C
     C=A+B
