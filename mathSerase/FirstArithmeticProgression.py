@@ -1,6 +1,17 @@
-"""Print the first n terms of an arithmetic progression for the given first term and 
-common difference. """
+from typing import List
 
-num=int(input("Enter the Number.."))
-for i in range(1,num+1):
-    sum=num/2(2*i(num-1))
+def longestCommonPrefix(strs: List[str]) -> str:
+    
+    strs.sort()
+    
+    first = strs[0]
+    last = strs[-1]
+    
+    i = 0
+    while i < len(first) and i < len(last) and first[i] == last[i]:
+        i += 1
+        
+    return first[:i]
+
+strs = ["flowre","flo","flowa"]
+print(longestCommonPrefix(strs))
